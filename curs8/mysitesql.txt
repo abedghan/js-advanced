@@ -1,0 +1,2 @@
+CREATE TABLE `mysite`.`jsusers` (`id` INT UNSIGNED NOT NULL AUTO_INCREMENT , `nume` VARCHAR(50) NOT NULL , `prenume` VARCHAR(50) NOT NULL , `email` VARCHAR(100) NOT NULL , `telefon` CHAR(10) NOT NULL , `datanastere` DATE NOT NULL , `dataadaugare` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+INSERT INTO `jsusers` (`id`, `nume`, `prenume`, `email`, `telefon`, `datanastere`, `dataadaugare`) VALUES (NULL, 'ghandour', 'abed', 'abed@abed.com', '1235342', '1991-08-08', current_timestamp());
