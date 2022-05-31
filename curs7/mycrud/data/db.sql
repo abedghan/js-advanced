@@ -1,4 +1,5 @@
-
+  CREATE DATABASE mysite;
+  USE mysite;
 CREATE TABLE `jsusers` (
   `id` int(10) UNSIGNED NOT NULL,
   `prenume` varchar(50) NOT NULL,

@@ -5,10 +5,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
+const cors_1 = __importDefault(require("cors"));
 const userRoute_1 = require("./routes/userRoute");
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use(express_1.default.urlencoded({ extended: true }));
+app.use((0, cors_1.default)());
 const port = process.env.PORT;
 app.use("/users", userRoute_1.userRouter);
 app.get('/', (req, res) => {
@@ -17,3 +19,6 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`[server]: Server is running at https://localhost:${port}`);
 });
+function cors() {
+    throw new Error('Function not implemented.');
+}
