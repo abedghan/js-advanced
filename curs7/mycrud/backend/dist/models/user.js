@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.findAll = void 0;
+exports.create = exports.findAll = void 0;
 const db_1 = require("../db");
 // Get all users 
 const findAll = (callback) => {
@@ -28,3 +28,16 @@ const findAll = (callback) => {
     });
 };
 exports.findAll = findAll;
+// create user
+const create = (user, callback) => {
+    const queryString = "INSERT INTO jsusers (nume, prenume, email, datanastere, telefon) VALUES (?, ?, ?, ?, ?)";
+    console.log(user);
+    db_1.db.query(queryString, [user.nume, user.prenume, user.email, user.datanastere, user.telefon], (err, result) => {
+        if (err) {
+            callback(err);
+        }
+        const insertId = result.insertId;
+        callback(null, insertId);
+    });
+};
+exports.create = create;

@@ -27,3 +27,24 @@ db.query(queryString, (err, result) => {
     callback(null,users);
 });
 };
+// create user
+export const create = (user: User, callback: Function) => {
+    const queryString =
+      "INSERT INTO jsusers (nume, prenume, email, datanastere, telefon) VALUES (?, ?, ?, ?, ?)";
+      console.log(user);
+    db.query(
+      queryString,
+      [user.nume, user.prenume, user.email, user.datanastere, user.telefon],
+      (err, result) => {
+        if (err) {
+          callback(err);
+        }
+      
+        
+          const insertId = (<OkPacket>result).insertId;
+          callback(null, insertId);
+        
+      }
+    );
+  };
+  

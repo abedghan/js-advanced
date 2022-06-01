@@ -50,3 +50,13 @@ userRouter.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         res.status(200).json({ 'data': users });
     });
 }));
+userRouter.post("/", jsonParser, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log(req.body);
+    const newUser = req.body;
+    userModel.create(newUser, (err, userId) => {
+        if (err) {
+            return res.status(500).json({ "message": err.message });
+        }
+        res.status(200).json({ "userId": userId });
+    });
+}));
