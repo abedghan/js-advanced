@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE articole[
+<!ELEMENT articole (articol+)>
+<!ELEMENT articol (idarticol,numa,category)>
+<!ELEMENT idarticol (#PCDATA)>
+<!ELEMENT numa (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+]>
+<articole>
+<articol>
+<idarticol>1</idarticol>
+<numa>coca cola</numa>
+<category>Bautore</category>
+</articol>
+<articol>
+<idarticol>2</idarticol>
+<numa>Paine</numa>
+<category>Alimantare</category>
+</articol>
+<articol>
+<idarticol>3</idarticol>
+<numa>Telephon</numa>
+<category>Electronice</category>
+</articol>
+
+</articole>

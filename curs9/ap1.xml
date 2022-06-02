@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contact>
+    <user id="1">
+    <nume>ionesco</nume>
+    <prenume>Ion</prenume>
+    <email>ion@ion</email>
+    <telefon>64594516</telefon>
+    </user>
+    <user id="2">
+    <nume>daniel</nume>
+    <prenume>dan</prenume>
+    <email>dan@ion</email>
+    <telefon>64894516</telefon>
+    </user>
+</contact>
